@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans" xmlns:dubbo="http://java.sun.com/xml/ns/j2ee"
+       xmlns="">
+
+    <!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
+    <dubbo:application name="linker-dubbox-consumer-userModel-test" />
+
+    <!-- 使用zookeeper注册中心暴露服务地址 -->
+    <!-- 注册中心地址 -->
+    <dubbo:registry protocol="zookeeper" address="zookeeper://10.10.111.185:2181" />
+
+    <!-- 订单服务接口 -->
+    <dubbo:reference interface="com.pengji.linker.dubbox.services.modules.ordersmanager.service.IOrdersService" id="ordersService" check="true" />
+
+</beans>
