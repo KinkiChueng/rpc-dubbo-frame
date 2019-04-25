@@ -1,6 +1,6 @@
-package service.impl;
+package com.service.impl;
 
-import service.IHelloService;
+import com.service.IHelloService;
 
 public class HelloServiceImpl implements IHelloService {
     @Override

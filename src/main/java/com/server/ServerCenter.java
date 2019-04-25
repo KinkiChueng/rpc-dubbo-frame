@@ -1,8 +1,8 @@
-package server;
+package com.server;
 
-import service.IHelloService;
-import service.IRpcService;
-import service.impl.HelloServiceImpl;
+import com.service.IHelloService;
+import com.service.IRpcService;
+import com.service.impl.HelloServiceImpl;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

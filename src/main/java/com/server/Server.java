@@ -1,6 +1,6 @@
-package server;
+package com.server;
 
-import service.IRpcService;
+import com.service.IRpcService;
 
 import java.io.IOException;
 

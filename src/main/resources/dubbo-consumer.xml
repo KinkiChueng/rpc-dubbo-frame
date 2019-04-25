@@ -4,13 +4,13 @@
        xmlns="">
 
     <!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
-    <dubbo:application name="linker-dubbox-consumer-userModel-test" />
+    <dubbo:application name="dubbox-consumer" />
 
-    <!-- 使用zookeeper注册中心暴露服务地址 -->
-    <!-- 注册中心地址 -->
-    <dubbo:registry protocol="zookeeper" address="zookeeper://10.10.111.185:2181" />
+    <!--&lt;!&ndash; 使用zookeeper注册中心暴露服务地址 &ndash;&gt;-->
+    <!--&lt;!&ndash; 注册中心地址 &ndash;&gt;-->
+    <!--<dubbo:registry protocol="zookeeper" address="zookeeper://10.10.111.185:2181" />-->
 
-    <!-- 订单服务接口 -->
-    <dubbo:reference interface="com.pengji.linker.dubbox.services.modules.ordersmanager.service.IOrdersService" id="ordersService" check="true" />
+    <!-- hello服务接口 -->
+    <dubbo:reference interface="com.service.IHelloService" id="HelloService" check="true" />
 
 </beans>

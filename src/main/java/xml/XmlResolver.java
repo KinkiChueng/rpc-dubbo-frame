@@ -1,10 +1,24 @@
 package xml;
 
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.io.SAXReader;
+
+import java.io.File;
 import java.util.List;
 
 public class XmlResolver {
-    public List doParse() {
-        //spring 注入
-     //   ApplicationContext  applicationContext = new ClassPathXmlApplicationContext("file:D:/workspace/GZDTL_TRUNK/zdd-web-consumer/spring/applicationContext.xml");
+    public static List doParse() {
+        //首先获得XmlPullParserFactory对象
+        SAXReader reader = new SAXReader();
+        Document document = null;
+        try {
+            document = reader.read(new File("dubbo-consumer"));
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        }
+        Element bookStore = document.getRootElement();
+        return null;
     }
 }
