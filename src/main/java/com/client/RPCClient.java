@@ -10,6 +10,9 @@ import java.net.Socket;
 public class RPCClient {
     @SuppressWarnings("unchecked")
     public static <T>T getRPCProxy(Class<T> tClass, final InetSocketAddress address) {
+        /*
+        可以把参数都放xml中解析
+         */
         return (T) Proxy.newProxyInstance(tClass.getClassLoader(), new Class<?>[]{tClass}, (proxy, method, args) -> {
             Socket socket = null;
             ObjectInputStream objectInputStream = null;
